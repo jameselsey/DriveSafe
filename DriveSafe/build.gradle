@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4'
+    }
+}
+apply plugin: 'android'
+
+repositories{
+    mavenLocal()
+}
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+
+    compile "com.google.android.admob:admob:6.4.1-r11"
+    compile "com.google.android.analytics:analytics:3"
+    compile "joda-time:joda-time:2.2"
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 16
+    }
+}
