@@ -9,9 +9,15 @@ buildscript {
 apply plugin: 'android'
 
 repositories{
-    mavenLocal()
-    mavenCentral()
-}
+        mavenCentral()
+        maven {
+            credentials {
+                username "${property_cloudbees_release_user}"
+                password "${property_cloudbees_release_password}"
+            }
+            url "https://repository-jameselsey.forge.cloudbees.com/release/"
+        }
+    }
 
 dependencies {
     compile files('libs/android-support-v4.jar')
