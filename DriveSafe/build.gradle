@@ -15,8 +15,8 @@ repositories{
 dependencies {
     compile files('libs/android-support-v4.jar')
 
-    compile "com.google.android.admob:admob:6.4.1-r11"
-    compile "com.google.android.analytics:analytics:3"
+    compile('com.simpligility.android.sdk-deployer:admob:6.4.1-r11')
+    compile('com.simpligility.android.sdk-deployer:analytics:3')
     compile "joda-time:joda-time:2.2"
 }
 
